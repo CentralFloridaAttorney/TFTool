@@ -12,12 +12,13 @@ Original file is located at
 
 ##Install MiniSom Package
 """
+import tensorflow
 
 """## Importing the libraries"""
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+##import matplotlib.pyplot as plt
 
 """## Importing the dataset"""
 
@@ -97,20 +98,17 @@ customers = sc.fit_transform(customers)
 ##Import Tensorflow
 """
 
-import tensorflow as tf
-tf.__version__
-
 """## Initializing the ANN"""
 
-ann = tf.keras.models.Sequential()
+ann = tensorflow.keras.models.Sequential()
 
 """##Adding the input layer and the first hidden layer"""
 
-ann.add(tf.keras.layers.Dense(units=2, activation='relu'))
+ann.add(tensorflow.keras.layers.Dense(units=2, activation='relu'))
 
 """## Adding the output layer"""
 
-ann.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
+ann.add(tensorflow.keras.layers.Dense(units=1, activation='sigmoid'))
 
 """## Training the ANN
 
